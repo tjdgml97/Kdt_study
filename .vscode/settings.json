@@ -3,5 +3,11 @@
     "editor.formatOnSave": true,
     // 이용할 룰 저장할때 formatting , 따를 룰 
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "j69.ejs-beautify"
+  },
+  "emmet.includeLanguages": {
+    "ejs": "html"
   }
 }
