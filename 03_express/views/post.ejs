@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js"></script>
+</head>
+
+<!-- USER_ARR, userCounts -->
+
+<body>
+  <h1>POST</h1>
+  <h1>회원 목록</h1>
+  <h2>
+    포스트 수 <%= userCounts %>
+  </h2>
+  <ul>
+    <% if(userCounts > 0) { %>
+    <% for(let i = 0; i < userCounts; i++) { %>
+    <li>
+      <p>
+        title : <%= POST[i].title %>
+      </p>
+      <p>
+        content : <%= POST[i].content %>
+      </p>
+    </li>
+    <% } %>
+    <% } else { %>
+    <li>회원 정보가 없습니다!</li>
+    <% } %>
+  </ul>
+
+  <form action="/post/add" method="POST">
+    <div>
+      <label>title</label>
+      <input type="text" name="name"/>
+    </div>
+    <div>
+      <label>이메일</label>
+      <input type="email" name="email"/>
+    </div>
+    <button type="submit">제출</button>
+  </form>
+  <!-- <img src="/images/puppy.jpeg" alt="강아지" /> -->
+</body>
+
+</html>
